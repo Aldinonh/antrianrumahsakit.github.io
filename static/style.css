@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #fff;
+    background-image: url("/static/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Tambahkan jarak bawah */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.patient-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Tambahkan jarak bawah */
+}
+
+.patient-table th,
+.patient-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+    color: #fff; /* Teks tetap berwarna putih */
+}
+
+
+.patient-table tbody tr:nth-child(even) {
+    background-color: rgba(140, 203, 36, 0.5);
+    color: #000;
+}
+
+.patient-table tbody tr:nth-child(odd) {
+    background-color: rgba(14, 151, 66, 0.5);
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hospital-image {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Tambahkan jarak bawah */
+}
+
+/* Media Queries untuk tampilan mobile */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .hospital-image {
+        width: 150px;
+        margin-top: 10px;
+        margin-bottom: 10px; /* Tambahkan jarak bawah */
+    }
+}
+
+/* Media Queries untuk tampilan mobile */
+@media (max-width: 768px) {
+    body {
+        background-image: url("/static/images/background.png");
+    }
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-links li {
+    margin-right: 15px;
+}
+
+.nav-links li a {
+    display: block;
+    color: #8ccb24;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #0e9742;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+.content {
+    padding-top: 70px; /* Tambahkan padding atas untuk menghindari konten tertutup oleh navbar */
+    padding-bottom: 70px; /* Tambahkan padding bawah untuk menghindari konten tertutup oleh footer */
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+

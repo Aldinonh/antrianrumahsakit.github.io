@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Antrian Rumah Sakit</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='navbar-logo.png') }}" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <h1>Antrian Rumah Sakit</h1>
+    
+            <img src="{{ url_for('static', filename='hospital.png') }}" alt="Rumah Sakit" class="hospital-image">
+    
+            <form action="/enqueue" method="post">
+                <label for="name">Nama Pasien</label>
+                <input type="text" id="name" name="name" required><br>
+    
+                <label for="age">Umur Pasien</label>
+                <input type="number" id="age" name="age" required><br>
+    
+                <label for="doctor_type">Jenis Dokter</label>
+                <select id="doctor_type" name="doctor_type">
+                    <option value="umum">Dokter Umum</option>
+                    <option value="spesialis">Dokter Spesialis</option>
+                </select><br>
+    
+                <input type="submit" value="Tambahkan ke Antrian">
+            </form>
+    
+            <br>
+    
+            <form action="/dequeue" method="post">
+                <input type="submit" value="Layani Pasien Berikutnya">
+            </form>
+    
+            <br>
+    
+            <h3>Antrian Saat Ini:</h3>
+            <table class="patient-table">
+                <thead>
+                    <tr>
+                        <th>No. Antrian</th>
+                        <th>Nama Pasien</th>
+                        <th>Umur Pasien</th>
+                        <th>Jenis Dokter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for patient in patients %}
+                        <tr>
+                            <td>{{ patient.queue_number }}</td>
+                            <td>{{ patient.name }}</td>
+                            <td>{{ patient.age }}</td>
+                            <td>{{ patient.doctor_type }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2023 Antrian Rumah Sakit. All rights reserved.</p>
+    </footer>
+</body>
+</html>
