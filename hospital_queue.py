@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.abspath('.'))
 
 class Node:
     def __init__(self, name, age, queue_number, doctor_type):
