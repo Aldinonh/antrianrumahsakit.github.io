@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tentang Rumah Sakit</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .responsive-image {
+        max-width: 100%;
+        height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='navbar-logo.png') }}" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about" class="active">About</a></li>
+                <li><a href="/layanan">Layanan</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="background-overlay"></div>
+    <div class="content">
+        <div class="container">
+            <h1>SEJARAH & GAMBARAN UMUM</h1>
+            <p>Rumah sakit Al Huda berdiri pada tanggal 1 Agustus 1991 dibawah naungan Yayasan Nurul Huda dengan layanan poliklinik pagi dan sore oleh dr. Musytahar Umar Thalib,  kemudian pada bulan Oktober 1991 dikembangkan dengan pelayanan Rawat Inap. Rumah Sakit Al Huda adalah Rumah Sakit milik Yayasan  Rumah Sakit Al Huda Genteng yang didirikan dengan tujuan ikut serta membantu usaha pemerintah dalam rangka meningkatkan derajat kesehatan masyarakat Genteng dan sekitarnya dan melaksanakan Jaminan Pelayanan Kesehatan Masyarakat.</p>
+            <p>Rumah Sakit AL Huda termasuk rumah sakit kategori tipe C dan merupakan rumah sakit swasta terbesar di Kabupaten Banyuwangi yang memiliki Izin Operasional: 12070002027640001 (berlaku sampai dengan 07 April 2027). Lokasi RS Al Huda sangat strategis, berada di jalur utama transportasi Jember – Banyuwangi, RS Al Huda di Jl. Raya Gambiran No. 225 Gambiran – Banyuwangi – Jawa Timur. Luas tanah RS Al Huda adalah 34.590 m2 dan luas bangunan 18.667,91 m2.</p>
+            <p>Rumah Sakit Al Huda kemudian mengembangkan pelayanan rawat inap pada tahun 2011 dengan membangun gedung manajemen, instlasi rawat jalan, Hemodialisa dan kelas 1 utama. Tahun 2011 Rumah Sakit Al Huda melaksanakan Akreditasi 16 pelayanan dengan predikat lengkap. Dan saat ini RS AL HUDA sudah meraih predikat paripurna akreditasi KARS versi 2012.</p>
+        <img src="{{ url_for('static', filename='Tempat-Tidur.jpg') }}" alt="" class="responsive-image">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Antrian Rumah Sakit. All rights reserved.</p>
+    </footer>
+</body>
+</html>

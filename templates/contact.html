@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Rumah Sakit</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .contact-info {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            opacity: 0.9;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .contact-info h1 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='navbar-logo.png') }}" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/layanan">Layanan</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background-overlay"></div>
+
+    <div class="content">
+        <div class="contact-info">
+            <h1>Contact Us</h1>
+            <p><strong>Alamat:</strong> Jl. Raya Gambiran No. 225 Gambiran – Banyuwangi – Jawa Timur – Indonesia</p>
+            <p><strong>Email:</strong> <a href="mailto:rs_alhuda@yahoo.com">rs_alhuda@yahoo.com</a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/rs_alhuda/">@rs_alhuda</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Antrian Rumah Sakit. All rights reserved.</p>
+    </footer>
+</body>
+</html>

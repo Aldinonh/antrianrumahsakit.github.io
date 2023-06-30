@@ -4,6 +4,7 @@
     <title>Antrian Rumah Sakit</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -11,14 +12,14 @@
                 <img src="{{ url_for('static', filename='navbar-logo.png') }}" alt="Logo">
             </div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/layanan">Layanan</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <div class="content">
         <div class="container">
             <h1>Antrian Rumah Sakit</h1>
@@ -72,7 +73,6 @@
             </table>
         </div>
     </div>
-    
 
     <footer>
         <p>&copy; 2023 Antrian Rumah Sakit. All rights reserved.</p>

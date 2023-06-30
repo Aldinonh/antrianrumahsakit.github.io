@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layanan Rumah Sakit</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .slide-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .slide-in.active {
+            opacity: 1;
+        }
+
+        .slide-out {
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .slide-out.inactive {
+            opacity: 0;
+        }
+
+        img {
+            margin-bottom: 30px;
+        }
+
+        .responsive-image {
+        max-width: 100%;
+        height: auto;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='navbar-logo.png') }}" alt="Logo" style="margin: 0%;">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/layanan" class="active">Layanan</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="background-overlay"></div>
+    <main class="content">
+        <h1>Layanan Rumah Sakit</h1>
+
+        <section class="about pos mt-5 slide-in active">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>INSTALASI RAWAT JALAN</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan1.jpg') }}" alt="" class="responsive-image">
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>INSTALASI RAWAT INAP</h2>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan2.png') }}" alt="" class="responsive-image">
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>PELAYANAN INTENSIF ICU</h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan3.png') }}" alt="" class="responsive-image">
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>RUANG ISOLASI</h2>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan4.png') }}" alt="" class="responsive-image">
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>RUANG PERINATOLOGI</h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan5.png') }}" alt="" class="responsive-image">
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>IGD 24 JAM</h2>
+                            </div>
+                            <p>
+                                Fasilitas :
+                            </p>   
+                                <ul>
+                                    <li>Dokter siap pelayanan 24 jam</li>
+                                    <li>Layanan Ponek</li>
+                                    <li>Ambulan IGD (Transport dan Emergency)</li>
+                                    <li>Emergency Trolley + KIT</li>
+                                    <li>Scope Stretcher</li>
+                                    <li>Head Immobilizer</li>
+                                    <li>Defibrillator</li>
+                                    <li>Patient Monitor</li>
+                                    <li>ECG</li>
+                                    <li>Syringe Pump</li>
+                                    <li>Infuse Pump</li>
+                                    <li>Long Spain Board</li>
+                                  </ul>
+                                   
+                            <p>  
+                                Didukung layanan Laboratorium, Radiologi, & Farmasi 24 jam
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan6.png') }}" alt="" class="responsive-image">
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>INSTALASI FARMASI</h2>
+                            </div>
+                            
+                                <ul>
+                                    <li>Layanan 24 jam</li>
+                                    <li>Unit Doze Dispensing</li>
+                                    <li>Konsultasi obat</li>
+                                  </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan7.png') }}" alt="" class="responsive-image">
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>LABORATORIUM 24 JAM</h2>
+                            </div>
+                            <p>PEMERIKSAAN :</p>
+                            <ul>
+                                <li>Hematologi</li>
+                                <li>Immunologi</li>
+                                <li>Kimia Klinis</li>
+                                <li>Analisa Urin</li>
+                                <li>Microbiologi</li>
+                                <li>Tes Mantoux</li>
+                                <li>PA (patologi anatomi)</li>
+                                <li>NS-1</li>
+                              </ul>
+                              
+                            <p>FASILITAS PENDUKUNG:</p>
+                            <ul>
+                                <li>Fotometer</li>
+                                <li>Hematologi Analyzer</li>
+                                <li>Centrifugal</li>
+                                <li>Elisa Set</li>
+                                <li>Rotator</li>
+                                <li>Kimia Klinik Analyzer</li>
+                                <li>Blood Gas Analyzer</li>
+                              </ul>
+                              
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan8.png') }}" alt="" class="responsive-image">
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>INSTALASI HEMODIALISIS</h2>
+                            </div>
+                            <p>
+                                TERSEDIA 33 UNIT MESIN HEMODIALISIS , Melayani Peserta BPJS Kesehatan dan Pasien Umum
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan9.jpg') }}" alt="" class="responsive-image">
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>INSTALASI RADIOLOGI</h2>
+                            </div>
+                            <p>
+                                FASILITAS PENDUKUNG: 
+                            </p>
+                            <ul>
+                                <li>MRI</li>
+                                <li>Panoramic cephalometric</li>
+                                <li>X-Ray 500 mA</li>
+                                <li>3D USG</li>
+                                <li>4D USG</li>
+                                <li>CT SCAN</li>
+                                <li>Mobile X-Ray 100 MA</li>
+                              </ul>
+                              
+
+                            <p>
+                                PELAYANAN: 
+                            </p>
+                            <ul>
+                                <li>USG : Perut, Permukaan dan Kehamilan</li>
+                                <li>Radiologi dengan kontras: IVP, HSG, Colon Inloop, Vesicography</li>
+                                <li>Radiologi Konvensional</li>
+                                <li>X-Ray Gigi</li>
+                              </ul>
+                              
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan10.jpg') }}" alt="" class="responsive-image">
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center slide-in">
+                        <div class="wrap ms-5">
+                            <div>
+                                <h2>KAMAR OPERASI</h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 slide-in">
+                        <img src="{{ url_for('static', filename='layanan11.jpg') }}" alt="" class="responsive-image">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Antrian Rumah Sakit. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            const slideInElements = document.querySelectorAll(".slide-in");
+            const slideOutElements = document.querySelectorAll(".slide-out");
+
+            for (let i = 0; i < slideInElements.length; i++) {
+                const elementTop = slideInElements[i].getBoundingClientRect().top;
+                const elementBottom = slideInElements[i].getBoundingClientRect().bottom;
+
+                if (elementTop < window.innerHeight && elementBottom > 0) {
+                    slideInElements[i].classList.add("active");
+                } else {
+                    slideInElements[i].classList.remove("active");
+                }
+            }
+
+            for (let i = 0; i < slideOutElements.length; i++) {
+                const elementTop = slideOutElements[i].getBoundingClientRect().top;
+                const elementBottom = slideOutElements[i].getBoundingClientRect().bottom;
+
+                if (elementTop < window.innerHeight && elementBottom > 0) {
+                    slideOutElements[i].classList.add("inactive");
+                } else {
+                    slideOutElements[i].classList.remove("inactive");
+                }
+            }
+        });
+    </script>
+</body>
+</html>

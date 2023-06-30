@@ -24,7 +24,7 @@ h1 {
     text-align: center;
     font-size: 32px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px; /* Tambahkan jarak bawah */
+    margin-bottom: 20px;
 }
 
 form {
@@ -60,7 +60,7 @@ input[type="submit"]:hover {
 .patient-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px; /* Tambahkan jarak bawah */
+    margin-bottom: 20px;
 }
 
 .patient-table th,
@@ -68,9 +68,8 @@ input[type="submit"]:hover {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #fff;
-    color: #fff; /* Teks tetap berwarna putih */
+    color: #fff;
 }
-
 
 .patient-table tbody tr:nth-child(even) {
     background-color: rgba(140, 203, 36, 0.5);
@@ -108,7 +107,7 @@ li {
     width: 200px;
     height: auto;
     margin-top: 20px;
-    margin-bottom: 20px; /* Tambahkan jarak bawah */
+    margin-bottom: 20px;
 }
 
 /* Media Queries untuk tampilan mobile */
@@ -124,14 +123,7 @@ li {
     .hospital-image {
         width: 150px;
         margin-top: 10px;
-        margin-bottom: 10px; /* Tambahkan jarak bawah */
-    }
-}
-
-/* Media Queries untuk tampilan mobile */
-@media (max-width: 768px) {
-    body {
-        background-image: url("/static/images/background.png");
+        margin-bottom: 10px;
     }
 }
 
@@ -148,6 +140,7 @@ li {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
 }
 
 .logo img {
@@ -156,7 +149,7 @@ li {
 
 .nav-links {
     list-style-type: none;
-    margin: 0;
+    margin-right: 50px;
     padding: 0;
     display: flex;
     flex-direction: row;
@@ -166,15 +159,26 @@ li {
     margin-right: 15px;
 }
 
+/* ... CSS sebelumnya ... */
+
 .nav-links li a {
     display: block;
     color: #8ccb24;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
 }
 
 .nav-links li a:hover {
-    background-color: #555;
+    border-color: #0e9742;
 }
+
+.nav-links li a.active {
+    border-color: #0e9742;
+}
+
+/* ... CSS setelahnya ... */
+
 
 /* Footer */
 footer {
@@ -184,41 +188,59 @@ footer {
     padding: 20px;
     margin: 0;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
+        height: 40px;
     }
 
-    .nav-links {
-        flex-direction: column;
-        margin-top: 10px;
+    .logo img {
+        height: 25px;
     }
 
-    .nav-links li {
-        margin-right: 0;
-        margin-bottom: 10px;
+    .nav-links li a {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
     }
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .content {
-    padding-top: 70px; /* Tambahkan padding atas untuk menghindari konten tertutup oleh navbar */
-    padding-bottom: 70px; /* Tambahkan padding bawah untuk menghindari konten tertutup oleh footer */
+    min-height: calc(100vh - 70px); /* Mengatur tinggi konten agar footer tetap berada di bawah */
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: url("/static/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin: 0 auto;
     max-width: 960px;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .content {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
+footer {
+    background-color: #0e9742;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
 }
-

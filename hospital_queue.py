@@ -91,5 +91,17 @@ def dequeue():
     queue.dequeue()
     return redirect('/')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/layanan')
+def services():
+    return render_template('layanan.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
